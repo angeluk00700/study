@@ -77,5 +77,9 @@ class GenericTest {
         System.out.println(p1.id);
 
         p1.printInfo(p1.info);
+
+        // TODO
+
+        // FIXME
     }
 }
