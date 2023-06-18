@@ -7,15 +7,19 @@ public class Abstract {
 
 }
 
-abstract class Keyboard {
-    private String keyTypeLanguage;
-    private int keyTypeNo;
-    private boolean hasLight;
-    private void useLight(boolean hasLight) {
-        if(hasLight) {
-            System.out.println("light");
-        } else {
-            System.out.println("not support light");
-        }
-    }
+public abstract class Animal {
+  abstract void eat();
+  abstract void run();
 }
+
+class Dog extends Animal{
+  @Override
+  void eat() {
+    System.out.println("eat dog food");
+  }
+  @Override
+  void run() {
+    System.out.println("run dog");
+  }
+}
+

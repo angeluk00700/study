@@ -1,21 +1,18 @@
-const puppeteer = require('puppeteer');
 
-(async () => {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-  await page.goto('https://www.fotmob.com/');
+const http = require('http');
+const fs = require('fs');
+const path = require('path');
 
-  // 검색 입력창 선택자
-//   const searchInputSelector = 'input[placeholder="Search"]';
-  // 검색 입력창을 찾고 검색어 입력
-  const searchInput = await page.$('.react-autosuggest__input');
-  await searchInput.type('Min-Jae Kim');
-  // 엔터 키 입력하여 검색 실행
-  await searchInput.press('Enter');
-  // 페이지 로딩이 완료될 때까지 대기
-  await page.waitForNavigation();
-  // 스크린샷
-  await page.screenshot({path: 'screenshot.png'})
+const server = http.createServer((req, res) => {
+  if(req.url === '/demo') {
+    const filePath = path.join(__dirname, 'a.html');
+    
+  }
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('hello nodejs');
+});
 
-  await browser.close();
-})();
+server.listen(8080, 'localhost',() => {
+  console.log('server is running on port 8080')
+});
