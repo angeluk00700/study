@@ -1,0 +1,57 @@
+{
+  "formatVersion": 3,
+  "id": "root",
+  "ideas": {
+    "1": {
+      "title": "webpack",
+      "id": 1,
+      "attr": {
+        "position": [
+          -100,
+          -53,
+          1
+        ],
+        "style": {
+          "fontMultiplier": 1.5,
+          "backgroundColor": "#99CC00"
+        }
+      },
+      "ideas": {
+        "1": {
+          "title": "<기능>\nHTML, JS 등 앱에 필요한 자원들을 HTML 1개, JS1개 이런 형식으로 한개의 파일로 압축",
+          "id": "2.5c69.96a4a8df3-2186.7bb235b34",
+          "attr": {
+            "style": {
+              "width": 268,
+              "textAlign": "left",
+              "fontMultiplier": 1.25
+            },
+            "position": [
+              112,
+              2,
+              1
+            ]
+          },
+          "ideas": {}
+        },
+        "11": {
+          "title": "<사용 이유>\n속도. 파일이 많으면 로딩속도가 느림. 예를 들어 첫화면에 압축된 모듈 하나만 로드해서 속도개선",
+          "id": "7.5c69.96a4a8df3-2186.7bb235b34",
+          "attr": {
+            "position": [
+              148,
+              96,
+              2
+            ],
+            "style": {
+              "width": 289,
+              "textAlign": "left",
+              "fontMultiplier": 1.25
+            }
+          }
+        }
+      }
+    }
+  },
+  "title": "webpack"
+}
