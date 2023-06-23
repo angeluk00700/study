@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Alert, Button, StyleSheet, Text, View } from 'react-native';
+import CustomButton from './CustomButton';
 
 export default function App() {
   return (
@@ -9,6 +10,14 @@ export default function App() {
       </View>
       <Text></Text>
       <Text style={[styles.Text, {color:'black'}]}>welcome to my app</Text>
+      <Text></Text>
+      <CustomButton
+        title='button'
+        titleColor='white'
+        butt
+        onPress={() => Alert.alert('버튼 클릭')}
+        // onPress={() => alert('회원가입 버튼')}
+      />
     </View>
   );
 }
@@ -29,5 +38,10 @@ const styles = StyleSheet.create({
   Text: {
     color: "white",
     fontSize: 18,
+  },
+  customButton: {
+    alignItems: "center",
+    backgroundColor: "red",
+    padding: 10,
   }
 });
