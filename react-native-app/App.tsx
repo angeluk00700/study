@@ -1,32 +1,47 @@
 import React from "react";
-import { Text, TextInput, View } from "react-native";
+import { View, Text, Alert } from "react-native";
+import { Stack, TextInput, IconButton } from "@react-native-material/core";
+import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const getFullName = (firstName: string, lastName: string) => {
   return firstName + " " + lastName;
 };
 
-const Cat = () => {
+/**
+ * 주제 입력창
+ * 1단계 입력창, 확인버튼, 추가버튼
+ * 2단계 입력창, 확인버튼, 추가버튼
+ * 추가버튼 누를때마다 위와 같은 단계를 반복
+ *
+ */
+
+/**
+ * 주제 표시창
+ * 1단계 표시창
+ * 단계가 늘어날때마다 위와 같은 표시창이 반복
+ */
+
+type InputTitle = {
+  title: string;
+};
+const MainDisp = () => {
   return (
     <View>
-      <Text>hello world. my name is {getFullName("kay", "jay")}</Text>
-      <TextInput
-        style={{ height: 40, borderColor: "gray", borderWidth: 2 }}
-        defaultValue="입력해주세요"
-      ></TextInput>
-      <Text></Text>
+      <TitleInput title="주제입력2"></TitleInput>
     </View>
   );
 };
 
-const Cafe = () => {
+const TitleInput = (props: InputTitle) => {
   return (
     <View>
-      <Text>루프</Text>
-      <Cat />
-      <Cat />
-      <Cat />
+      <TextInput label={props.title} style={{ margin: 20 }} />
     </View>
   );
 };
 
-export default Cafe;
+const OkBtn = () => {
+  return <View></View>;
+};
+
+export default MainDisp;
